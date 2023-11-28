@@ -1,0 +1,15 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build --scope=component-library-a --stream && lerna run build --scope=component-library-b --stream"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^6.0.3"
+  }
+}
