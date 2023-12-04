@@ -19,6 +19,10 @@ export const config: Config = {
     },
   ],
   testing: {
-    browserHeadless: "new"
+    browserHeadless: "new",
+    transform: {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    transformIgnorePatterns: ["node_modules/?!(component-library-a)"]
   },
 };
