@@ -6,9 +6,14 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "build": "lerna run build --scope=component-library-a --stream && lerna run build --scope=component-library-b --stream"
+    "build:component-library-a-react": "lerna run build --scope=component-library-a-react --stream",
+    "build:component-library-a": "lerna run build --scope=component-library-a --stream",
+    "build:component-library-b": "lerna run build --scope=component-library-b --stream",
+    "build": "npm run build:component-library-a && npm run build:component-library-a-react && npm run build:component-library-b"
   },
-  "dependencies": {},
+  "dependencies": {
+    "rimraf": "^5.0.5"
+  },
   "devDependencies": {
     "lerna": "^6.0.3"
   }

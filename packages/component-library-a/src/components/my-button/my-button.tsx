@@ -9,7 +9,9 @@ import { h, Component } from "@stencil/core";
 export class Button {
   render() {
     return (
-      <button>Click me</button>
+      <button>
+        <slot />
+      </button>
     )
   }
 }
